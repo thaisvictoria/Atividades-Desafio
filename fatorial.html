@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular fatorial</title>
+</head>
+<body>
+    <h1>Calcular fatorial</h1>
+<script>
+
+function calcularFatorial(numero) {
+    if (numero === 0 || numero === 1) {
+        return 1;
+    } else {
+        return numero * calcularFatorial(numero - 1);
+    }
+}
+
+const numero = parseFloat(prompt("Digite um numero para calcular o fatorial:"));
+
+if (!isNaN(numero)) {
+  const resultado = calcularFatorial(numero);
+
+  document.write(`O fatorial de ${numero} é ${resultado}`);
+} else {
+
+  document.write("Por favor, insira um número válido.");
+}
+</script>
+
+</body>
+</html>

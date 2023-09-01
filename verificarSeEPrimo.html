@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar se o numero é primo</title>
+  </head>
+  <body>
+    <h1>Verificar se o numero é primo</h1>
+
+    <script>
+      const num1 = parseFloat(prompt("Digite um número"));
+
+      function isPrimo(numero) {
+        if (numero <= 1) return false;
+        for (let i = 2; i < numero; i++) {
+          if (numero % i === 0) return false;
+        }
+        return true;
+      }
+
+      if (isPrimo(num1)) {
+        document.write(num1 + " é um número primo");
+      } else {
+        document.write(num1 + " NÃO é um número primo");
+      }
+    </script>
+  </body>
+</html>
