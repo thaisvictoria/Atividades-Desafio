@@ -64,7 +64,7 @@
 <body>
 
     <header>
-    <h1 class="barName">Bar Victoria</h1>
+    <h1 class="barName">Bar da Thata</h1>
       <div class="conta">
       </div>
     </header>
@@ -73,36 +73,37 @@
   <h1 class="contaBar">Conta de Bar</h1>
     <form action="">
       <h4>Valor do Chopp antes do Happy Hour:</h4>
-      <input type="number" id="choppAntesHH">
+      <input type="number" id="choppAntes">
       <h4>Quantidade de Chopp antes do Happy Hour:</h4>
-      <input type="number" id="quantAntesHH">
+      <input type="number" id="quantAntes">
   
       <h4>Valor do Chopp depois do Happy Hour:</h4>
-      <input type="number" id="choppDepoisHH">
+      <input type="number" id="choppDepois">
       <h4>Quantidade de Chopp depois do Happy Hour:</h4>
-      <input type="number" id="quantDepoisHH"><br><br>
+      <input type="number" id="quantDepois"><br><br>
   
       <button type="button" onclick="calcularTotal()">Calcular</button>
       </form>
     </fieldset>
   <script>
       function calcularTotal() {
-          const choppAntesHH = parseFloat(document.getElementById('choppAntesHH').value);
-          const quantAntesHH = parseInt(document.getElementById('quantAntesHH').value);
-          const choppDepoisHH = parseFloat(document.getElementById('choppDepoisHH').value);
-          const quantDepoisHH = parseInt(document.getElementById('quantDepoisHH').value);
+          const choppAntes = parseFloat(document.getElementById('choppAntes').value);
+          const quantAntes = parseInt(document.getElementById('quantAntes').value);
+          const choppDepois = parseFloat(document.getElementById('choppDepois').value);
+          const quantDepois = parseInt(document.getElementById('quantDepois').value);
 
-          const totalAntesHH = choppAntesHH * quantAntesHH;
-          const totalDepoisHH = choppDepoisHH * quantDepoisHH;
-          const totalTaxaServico = 0.10 * totalDepoisHH ;
-          const totalFinal = totalDepoisHH + totalTaxaServico;
+          const totalAntes = choppAntes * quantAntes;
+          const totalDepois = choppDepois * quantDepois;
+          const totalTaxaServico = 0.10 * totalDepois ;
+          const totalFinal = totalDepois + totalTaxaServico;
+          const total = totalAntes + totalFinal;
 
           const relatorio =
-          `
-                Valor total antes do Happy Hour (com desconto): R$ ${totalAntesHH}
-                Valor total depois do Happy Hour (sem desconto): R$ ${totalDepoisHH}
+            `   Valor total antes do Happy Hour (com desconto): R$ ${totalAntes}
+                Valor depois do Happy Hour (sem desconto): R$ ${totalDepois}
                 Valor da taxa de serviço: R$${totalTaxaServico}
                 Valor final(com taxa): R$ ${totalFinal}
+                Valor total(do antes e depois do happy hour): R$ ${total}
             `
             ;
             alert(relatorio)
