@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular Média</title>
+  </head>
+  <body>
+    <h1>Calcular média</h1>
+
+    <script>
+        const valor1 = parseFloat(prompt("Digite o valor 1"));
+        const valor2 = parseFloat(prompt("Digite o valor 2"));
+        const valor3 = parseFloat(prompt("Digite o valor 3"));
+        const valor4 = parseFloat(prompt("Digite o valor 4"));
+      
+        function calcularMedia() {
+        const soma = valor1 + valor2 + valor3 + valor4;
+        const quantidade = 4;
+        const media = soma / quantidade;
+
+        document.write("A soma é " + soma + "<br>");
+        document.write("A média é " + media);
+      }
+
+      calcularMedia();
+    </script>
+  </body>
+</html>

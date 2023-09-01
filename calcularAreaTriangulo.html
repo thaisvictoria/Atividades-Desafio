@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular area do triangulo</title>
+  </head>
+  <body>
+    <h1>Calcular area de triangulo</h1>
+    <script>
+      function calcularAreaTriangulo(base, altura) {
+        return (base * altura) / 2;
+      }
+      const baseTriangulo = parseFloat(
+        prompt("Diga o comprimento da base do triangulo")
+      );
+      const alturaTriangulo = parseFloat(
+        prompt("Diga o comprimento da altura")
+      );
+      const areaTriangulo = calcularAreaTriangulo(
+        baseTriangulo,
+        alturaTriangulo
+      );
+
+      document.write("A area do triangulo é " + areaTriangulo);
+    </script>
+  </body>
+</html>

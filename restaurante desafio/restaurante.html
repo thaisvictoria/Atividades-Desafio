@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Hour</title>
+   <style>
+    *{
+      margin: 0;
+    }
+    body{
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: url(imagemdefundo.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-size: 15px;
+  
+    }
+
+    fieldset{
+      width: max-content;
+      display: inline-block;
+      margin: 5%;
+      background-color: rgb(193, 193, 193);
+      color: rgb(32, 39, 36);
+      border-radius: 10px;
+    }
+
+    header{
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background-color: rgb(28, 36, 34);
+      color: aliceblue;
+      padding: 30px;
+    }
+
+    .contaBar{
+      margin: 15px;
+    }
+
+   h4{
+    margin: 15px;
+   }
+
+   input{
+    border-radius: 5px;
+    width: 100px;
+    padding: 5px;
+   }
+
+   button{
+    background-color: rgb(43, 55, 51);
+    color: aliceblue;
+    border: 0;
+    border-radius: 5px;
+    width: 100px;
+    padding: 5px;
+   }
+
+
+   </style>
+</head>
+<body>
+
+    <header>
+    <h1 class="barName">Bar Victoria</h1>
+      <div class="conta">
+      </div>
+    </header>
+
+  <fieldset>
+  <h1 class="contaBar">Conta de Bar</h1>
+    <form action="">
+      <h4>Valor do Chopp antes do Happy Hour:</h4>
+      <input type="number" id="choppAntesHH">
+      <h4>Quantidade de Chopp antes do Happy Hour:</h4>
+      <input type="number" id="quantAntesHH">
+  
+      <h4>Valor do Chopp depois do Happy Hour:</h4>
+      <input type="number" id="choppDepoisHH">
+      <h4>Quantidade de Chopp depois do Happy Hour:</h4>
+      <input type="number" id="quantDepoisHH"><br><br>
+  
+      <button type="button" onclick="calcularTotal()">Calcular</button>
+      </form>
+    </fieldset>
+  <script>
+      function calcularTotal() {
+          const choppAntesHH = parseFloat(document.getElementById('choppAntesHH').value);
+          const quantAntesHH = parseInt(document.getElementById('quantAntesHH').value);
+          const choppDepoisHH = parseFloat(document.getElementById('choppDepoisHH').value);
+          const quantDepoisHH = parseInt(document.getElementById('quantDepoisHH').value);
+
+          const totalAntesHH = choppAntesHH * quantAntesHH;
+          const totalDepoisHH = choppDepoisHH * quantDepoisHH;
+          const totalTaxaServico = 0.10 * totalDepoisHH ;
+          const totalFinal = totalDepoisHH + totalTaxaServico;
+
+          const relatorio =
+          `
+                Valor total antes do Happy Hour (com desconto): R$ ${totalAntesHH}
+                Valor total depois do Happy Hour (sem desconto): R$ ${totalDepoisHH}
+                Valor da taxa de serviço: ${totalTaxaServico}%
+                Valor final(com taxa): R$ ${totalFinal}
+            `
+            ;
+            alert(relatorio)
+      }
+
+  </script>
+</body>
+</html>

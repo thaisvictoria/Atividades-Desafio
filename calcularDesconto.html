@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular desconto</title>
+  </head>
+  <body>
+    <h1>Calcular desconto</h1>
+    <script>
+      const preço = parseFloat(prompt("Digite um valor:"));
+      const desconto = parseFloat(prompt("Digite o desconto:"));
+
+      function calcularDesconto() {
+        const resultadoDesconto = preço * (desconto / 100);
+
+        document.write(
+          "O desconto de " + preço + " é de " + resultadoDesconto + "%"
+        );
+      }
+
+      calcularDesconto();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar Maior Numero</title>
+  </head>
+  <body>
+    <h1>Verificar maior numero</h1>
+    <script>
+      const num1 = parseFloat(prompt("Digite o primeiro numero: "));
+      const num2 = parseFloat(prompt("Digite o segundo numero: "));
+      function verificarMaiorNumero() {
+        if (num1 > num2) {
+          document.write(
+            "Esse primeiro numero " + "(" + num1 + ")" +
+              " é maior que o segundo " + "(" + num2 + ")"
+          );
+        } else if (num2 > num1) {
+          document.write(
+            "Esse segundo numero " + "(" + num2 + ")" +
+              " é maior que o primeiro " + "(" + num1 + ")" );
+        } else {
+          document.write("Esses numeros sao iguais");
+        }
+      }
+
+      verificarMaiorNumero();
+    </script>
+  </body>
+</html>

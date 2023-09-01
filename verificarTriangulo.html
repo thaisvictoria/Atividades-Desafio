@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Verificar triangulo</h1>
+    <script>
+      const lado1 = parseFloat(prompt("Digite o valor do lado 1"));
+      const lado2 = parseFloat(prompt("Digite o valor do lado 2"));
+      const lado3 = parseFloat(prompt("Digite o valor do lado 3"));
+
+      function verificarTriangulo(a, b, c) {
+        if (a + b > c && a + c > b && b + c > a) {
+          return "É triangulo";
+        } else {
+          return "Não é triangulo";
+        }
+      }
+
+      const resultado = verificarTriangulo(lado1, lado2, lado3);
+      document.write(resultado);
+
+      verificarTriangulo();
+    </script>
+  </body>
+</html>
